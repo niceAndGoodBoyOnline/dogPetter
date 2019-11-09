@@ -351,12 +351,12 @@ function attempt(){
 	if (dogOne.src ==  dogPic)
 	{
 		dogOne.src = "./img/missDog.png";
-		setTimeout(function() {dogOne.src = "./img/Dog.gif";},350);
+		setTimeout(function() {dogOne.src = "./img/dog.gif";},350);
 	}
 	if (dogTwo.src ==  dogPic)
 	{
 		dogTwo.src = "./img/missDog.png";
-		setTimeout(function() {dogTwo.src = "./img/Dog.gif";},350);
+		setTimeout(function() {dogTwo.src = "./img/dog.gif";},350);
 	}
 	console.log('miss ' + attemptRecord);
 	soundManager('miss');
