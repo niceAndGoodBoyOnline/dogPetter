@@ -1,0 +1,56 @@
+#resetButton{
+	position: relative;
+	visibility: hidden;
+	top: 80vh;
+}
+
+#bg{
+	z-layer:-10;
+}
+
+#missBox{
+	position: relative;
+	z-index: 1;
+}
+
+#dogOne{
+	position: absolute;
+	width: 125px;
+	height: 100px;
+	top: 20vh;
+	left: 20vw;
+	z-index: 2;
+}
+
+#dogTwo{
+	position: absolute;
+	width: 125px;
+	height: 100px;
+	z-index: 2;
+}
+
+#theBody{ 
+	background-image: url("../img/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;	
+}
+
+#theScore{
+	color: yellow;
+	font-size: 30px;
+}
+
+#changeMode{
+	position: relative;
+	top: 80vh;
+	left: 77vw;
+	visibility: hidden;
+	
+}
+
+#emotionalState{
+	position: relative;
+	font-size: 40;
+	visibility: hidden;
+}

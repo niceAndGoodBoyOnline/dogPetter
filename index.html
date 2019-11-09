@@ -1,0 +1,33 @@
+<!DOCTYPE: HTML>
+<html>
+	<head>
+	<title>Dog Petter</title>
+	<link rel="stylesheet" href="./css/css.css"/>
+	</head>
+
+<body id="theBody">
+
+	<div id='theScore'></div>
+	<div id='emotionalState'>❤️</div>
+	
+	<img id='dogOne' onclick='gameManager(dogOne)'>
+	<img id='dogTwo' onclick='gameManager(dogTwo)'>
+	<div id='missBox' onclick='attempt()'>
+	<button id='resetButton' onclick="location.reload(true)">Reset Game</button>
+	<button id='changeMode' onclick="modeToggle()">Change Mode</button>
+	</div>
+	
+	<audio id='bgm' autoplay loop>
+		<source id='bgmSource' src="./media/amir_mode.mp3" type='audio/ogg'>	
+	</audio>
+	
+	<audio id='fx'>
+		<source id='fxSource' src="./media/miss1.mp3" type='audio/ogg'>
+	</audio>
+	
+	<audio id='fxDogs'>
+		<source id='fxDogsSource' src="./media/medium dog.mp3" type='audio/ogg'>
+	</audio>
+</body>
+<script src="./js/js.js"></script>
+</html>
