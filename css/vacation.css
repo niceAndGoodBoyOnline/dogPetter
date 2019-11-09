@@ -1,0 +1,15 @@
+#beach_head{
+	width: auto;
+	height: 60vh;
+	top: 20vh;
+	left: 40vw;
+	position: absolute;
+	align: center;
+}
+
+body{
+	overflow: hidden;
+	background-image: url("../img/code.gif");
+	background-repeat: no;
+	background-size: cover;
+}

@@ -20,6 +20,7 @@ let dogOne = document.getElementById('dogOne');
 let dogTwo = document.getElementById('dogTwo');
 	dogTwo.src = "./img/dog.gif";
 let dogPic = dogOne.src;
+let dogPic2 = dogTwo.src;
 let jumpOne = 0;
 let jumpTwo = 0;
 let modeFlag = 2000;
@@ -67,8 +68,9 @@ function modeToggle(){
 		changeMode.innerHTML = "Change to Gamer Mode"
 	}
 	
-	jumpOne = setInterval(function() {moveDog(dogOne);}, modeFlag);
-	jumpTwo = setInterval(function() {moveDog(dogTwo);}, modeFlag);
+	if (dogOne.src == dogPic){
+		jumpOne = setInterval(function() {moveDog(dogOne);}, modeFlag);
+	}
 	
 }
 
@@ -214,13 +216,17 @@ function dogSounds(thisDog){
 			fxDogs.load();
 			fxDogs.play();			
 		}
-	console.log(fxDogsSource);
 	
 }
 
 
 function twoDogPlease(){
-	dogTwo.style = "visibility: visible";	
+	if (dogTwo.style.visibility = "hidden"){
+	dogTwo.style = "visibility: visible";
+	}
+	else{
+	dogTwo.style = "visibility: hidden";
+	}
 }
 
 
@@ -241,7 +247,7 @@ function gameState(){
 function modeState(){
 	
 	if (modeFlag < 200){
-		
+		modeFlag = 200;
 	}
 	
 	else if (modeFlag < 2000){
@@ -351,12 +357,12 @@ function attempt(){
 	if (dogOne.src ==  dogPic)
 	{
 		dogOne.src = "./img/missDog.png";
-		setTimeout(function() {resetDog(dogOne);},350);
+		setTimeout(function() {dogOne.src = "./img/dog.gif";},350);
 	}
-	if (dogTwo.src ==  dogPic)
+	if (dogTwo.src ==  dogPic2)
 	{
 		dogTwo.src = "./img/missDog.png";
-		setTimeout(function() {resetDog(dogTwo);},350);
+		setTimeout(function() {dogTwo.src = "./img/dog.gif";},350);
 	}
 	console.log('miss ' + attemptRecord);
 	soundManager('miss');
