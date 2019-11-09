@@ -16,9 +16,9 @@ let fxDogsSource = document.getElementById('fxDogsSource');
 let scoreRecord = 0;
 let attemptRecord = 0;
 let dogOne = document.getElementById('dogOne');
-	dogOne.src = "./img/Dog.gif";
+	dogOne.src = "./img/dog.gif";
 let dogTwo = document.getElementById('dogTwo');
-	dogTwo.src = "./img/Dog.gif";
+	dogTwo.src = "./img/dog.gif";
 let dogPic = dogOne.src;
 let jumpOne = 0;
 let jumpTwo = 0;
@@ -99,6 +99,28 @@ function checkBGM(){
 function soundManager(thisSound){
 	rollSound = random10()
 	
+	if (thisSound == 'life5'){
+		fxSource.src = "./media/sad1.mp3";
+		fx.load();
+		fx.play();	
+	}
+	if (thisSound == 'life10'){
+		fxSource.src = "./media/sad2.mp3";
+		fx.load();
+		fx.play();	
+	}
+	if (thisSound == 'life15'){
+		fxSource.src = "./media/sad3.mp3";
+		fx.load();
+		fx.play();	
+	}
+	if (thisSound == 'life20'){
+		fxSource.src = "./media/sad5.mp3";
+		fx.load();
+		fx.play();	
+	}
+	
+	
 	if (thisSound == 'pet'){
 		
 		if (rollSound < 3){
@@ -161,26 +183,7 @@ function soundManager(thisSound){
 		}
 	}
 	
-	if (thisSound == 'life5'){
-		fxSource.src = "./media/sad1.mp3";
-		fx.load();
-		fx.play();	
-	}
-	if (thisSound == 'life10'){
-		fxSource.src = "./media/sad2.mp3";
-		fx.load();
-		fx.play();	
-	}
-	if (thisSound == 'life15'){
-		fxSource.src = "./media/sad3.mp3";
-		fx.load();
-		fx.play();	
-	}
-	if (thisSound == 'life20'){
-		fxSource.src = "./media/sad5.mp3";
-		fx.load();
-		fx.play();	
-	}
+	
 	
 }
 
@@ -271,7 +274,7 @@ function clearJump(thisDog){
 
 // changes dog to original sprite
 function resetDog(thisDog){
-	thisDog.src = "./img/Dog.gif";
+	thisDog.src = "./img/dog.gif";
 }
 
 
