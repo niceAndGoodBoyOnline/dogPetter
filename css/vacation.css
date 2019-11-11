@@ -7,6 +7,14 @@
 	align: center;
 }
 
+#theDog{
+	visibility: visible;
+	left: 2200px;
+	top: 70vh;
+	position: relative;
+	z-index: 3;
+}
+
 body{
 	overflow: hidden;
 	background-image: url("../img/code.gif");

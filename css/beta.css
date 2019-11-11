@@ -1,0 +1,30 @@
+html{
+	background: url(../img/boss_cave.gif) no-repeat center center fixed;
+	background-size: cover;
+	
+}
+
+body{
+	height: 80vh;
+	width: audo;
+}
+
+#bossDog{
+	position: fixed;
+	top: 5vh;
+	left: 20vw;
+	width: 800px;
+	z-index: 3
+}
+
+#petHand{
+	
+	
+	
+}
+
+#blockHand{
+	
+	
+	
+}

@@ -30,15 +30,17 @@
 }
 
 #theBody{ 
-	background-image: url("../img/bg.jpg");
+	background-position: 100% 0%;
+	background-image: url("../img/background_animated.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;	
+	
 }
 
 #theScore{
-	color: yellow;
-	font-size: 30px;
+	color: Black;
+	font-size: 50px;
 }
 
 #changeMode{

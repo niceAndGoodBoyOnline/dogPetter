@@ -31,16 +31,15 @@ let bgmOn = false;
 bgm.volume = 0.3;
 fxvolume = 0.4;
 
-
-
 prepareNextDog(dogOne);
 prepareNextDog(dogTwo);
 
-
+//makes a random number between 0-10
 function random10(){
 	rollNum = Math.floor(Math.random() * 10)
 	return rollNum
 }
+
 
 //switches between Amir Mode and Story Mode
 function modeToggle(){
@@ -75,6 +74,7 @@ function modeToggle(){
 }
 
 
+//called by petting dog, runs a bunch of checks/functions to make game go
 function gameManager(thisDog){
 	
 	checkBGM();
@@ -89,6 +89,7 @@ function gameManager(thisDog){
 }
 
 
+//turns bgm on if it was turned off. music ON.
 function checkBGM(){
 	
 	if (bgmOn == false){
@@ -98,6 +99,7 @@ function checkBGM(){
 }
 
 
+//manage human sounds
 function soundManager(thisSound){
 	rollSound = random10()
 	
@@ -190,6 +192,7 @@ function soundManager(thisSound){
 }
 
 
+//manages dog after successful pet
 function dogHandle(thisDog){
 	clearJump(thisDog);	
 	soundManager('pet');
@@ -199,6 +202,7 @@ function dogHandle(thisDog){
 }
 
 
+//handles dog sounds
 function dogSounds(thisDog){
 		
 		if (thisDog.height == 100){
@@ -220,6 +224,8 @@ function dogSounds(thisDog){
 }
 
 
+
+// one dog or two button -- not implimented rn
 function twoDogPlease(){
 	if (dogTwo.style.visibility = "hidden"){
 	dogTwo.style = "visibility: visible";
@@ -230,6 +236,7 @@ function twoDogPlease(){
 }
 
 
+//manage game state events
 function gameState(){
 	
 	if (scoreRecord >= 25){
@@ -244,6 +251,7 @@ function gameState(){
 }
 
 
+// speeds up dog jumpInterval
 function modeState(){
 	
 	if (modeFlag < 200){
@@ -265,6 +273,7 @@ function scorePoints(thisDog){
 }
 
 
+//clears dog jumpInterval
 function clearJump(thisDog){
 	
 	if (thisDog == dogOne){
@@ -284,6 +293,7 @@ function resetDog(thisDog){
 }
 
 
+//resets dog jumpInterval
 function setJump(thisDog){
 	
 	if (thisDog == dogOne){
@@ -321,6 +331,7 @@ function prepareNextDog(thisDog){
 }
 
 
+//moves the dog around
 function moveDog(thisDog){
 	
 	let w = window.innerWidth;
@@ -338,6 +349,7 @@ function moveDog(thisDog){
 }
 
 
+//area to miss in
 function setupMissBox(){
 	let w = window.innerWidth;
 	let h = window.innerHeight;
@@ -370,6 +382,7 @@ function attempt(){
 }
 
 
+//manage life related events
 function lifeState(){
 	
 	if (modeFlag < 2000){
@@ -392,5 +405,11 @@ function lifeState(){
 		
 	}
 
+}
+
+
+//secret mode beta
+function boss_fight(){
+	window.location.href = ".html/beta.html";
 }
 
