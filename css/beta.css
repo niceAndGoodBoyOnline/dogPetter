@@ -1,30 +1,247 @@
 html{
 	background: url(../img/boss_cave.gif) no-repeat center center fixed;
 	background-size: cover;
+	font-family: monospace;
 	
 }
 
 body{
+	overflow: hidden;
 	height: 80vh;
 	width: audo;
 }
 
-#bossDog{
-	position: fixed;
-	top: 5vh;
-	left: 20vw;
-	width: 800px;
-	z-index: 3
+#scoreZone{
+	
+	color: white;
 }
+
+#bossDog{
+	position: absolute;
+	top: 25vh;
+	left: 20vw;
+	width: 700px;
+	z-index: 1;
+}
+
 
 #petHand{
-	
-	
+	position: absolute;
+	left: 60%;
+	top: 70%;
+	z-index: 5;
+}
+
+#defendHand{
+	position: absolute;
+	left: -10%;
+	top: 70%;
+	z-index: 4;
+}
+
+#justaFunction{
 	
 }
 
-#blockHand{
-	
-	
-	
+
+#epBar{
+
+}
+
+#mpBar{
+
+}
+
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+
+.epMeter {
+			height: 15px;  
+			position: relative;
+			background: #555;
+			margin: 3px;
+			padding: 2px;
+			-webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+			-moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+			box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+		}
+		
+.epMeter > span {
+			text-align: center;
+			display: block;
+			height: 100%;
+			   -webkit-border-top-right-radius: 8px;
+			-webkit-border-bottom-right-radius: 8px;
+			       -moz-border-radius-topright: 8px;
+			    -moz-border-radius-bottomright: 8px;
+			           border-top-right-radius: 8px;
+			        border-bottom-right-radius: 8px;
+			    -webkit-border-top-left-radius: 2px;
+			 -webkit-border-bottom-left-radius: 2px;
+			        -moz-border-radius-topleft: 2px;
+			     -moz-border-radius-bottomleft: 2px;
+			            border-top-left-radius: 2px;
+			         border-bottom-left-radius: 2px;
+			background-color: rgb(43,194,83);
+			-webkit-box-shadow:
+			  inset 0 2px 9px  rgba(255,255,255,0.3),
+			  inset 0 -2px 6px rgba(0,0,0,0.4);
+			-moz-box-shadow:
+			  inset 0 2px 9px  rgba(255,255,255,0.3),
+			  inset 0 -2px 6px rgba(0,0,0,0.4);
+			box-shadow:
+			  inset 0 2px 9px  rgba(255,255,255,0.3),
+			  inset 0 -2px 6px rgba(0,0,0,0.4);
+			position: relative;
+			overflow: hidden;
+		}
+		
+
+.mpMeter {
+			height: 15px;  /* Can be anything */
+			position: relative;
+			background: #555;
+			margin: 3px;
+			padding: 2px;
+			-webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+			-moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+			box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+		}
+		
+.mpMeter > span {
+			text-align: center;
+			display: block;
+			height: 100%;
+			   -webkit-border-top-right-radius: 8px;
+			-webkit-border-bottom-right-radius: 8px;
+			       -moz-border-radius-topright: 8px;
+			    -moz-border-radius-bottomright: 8px;
+			           border-top-right-radius: 8px;
+			        border-bottom-right-radius: 8px;
+			    -webkit-border-top-left-radius: 2px;
+			 -webkit-border-bottom-left-radius: 2px;
+			        -moz-border-radius-topleft: 2px;
+			     -moz-border-radius-bottomleft: 2px;
+			            border-top-left-radius: 2px;
+			         border-bottom-left-radius: 2px;
+			background-color: rgb(43,194,83);
+			-webkit-box-shadow:
+			  inset 0 2px 9px  rgba(255,255,255,0.3),
+			  inset 0 -2px 6px rgba(0,0,0,0.4);
+			-moz-box-shadow:
+			  inset 0 2px 9px  rgba(255,255,255,0.3),
+			  inset 0 -2px 6px rgba(0,0,0,0.4);
+			box-shadow:
+			  inset 0 2px 9px  rgba(255,255,255,0.3),
+			  inset 0 -2px 6px rgba(0,0,0,0.4);
+			position: relative;
+			overflow: hidden;
+		}
+
+/* Effects from https://ianlunn.github.io/Hover/ */
+/* Buzz-out turned into Grumble*/
+@keyframes grumble {
+  10% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    transform: translateX(-1px) rotate(0);
+  }
+}
+.grumble {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  
+  animation-name: grumble;
+  animation-duration: 0.75s;
+  animation-iteration-count: 10;
+}
+
+
+
+
+/* Push turned into 'bark' */
+@-webkit-keyframes bark {
+  30% {
+    -webkit-transform: scale(0.89);
+    transform: scale(0.89);
+  }
+  100% {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+}
+@keyframes bark {
+  30% {
+    -webkit-transform: scale(0.89);
+    transform: scale(0.89);
+  }
+  100% {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+}
+.bark {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-animation-name: bark;
+  animation-name: bark;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
