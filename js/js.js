@@ -410,7 +410,7 @@ function lifeState(){
 
 //secret mode beta
 function boss_fight(){
-	window.location.href = ".html/beta.html";
+	window.location.href = "./html/beta.html";
 }
 
 console.log('use function boss_fight() to see the beta mode')
