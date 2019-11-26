@@ -124,6 +124,8 @@ function petDog(){
 		dogEp = (dogEp -= 30*Math.random());
 		dogMp = (dogMp += 5*Math.random());
 		petScore += 1;
+		bossDog.classList.add('pet')
+		setTimeout(function() {bossDog.classList.remove('pet');},300);
 		scoreZone.innerHTML = "Pets: " + petScore;
 		meterManger()
 	}
